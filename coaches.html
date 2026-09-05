@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Coaches | Highridge Sports Academy</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .coaches-hero {
+      background: var(--color-primary);
+      color: var(--bg-white);
+      padding: 100px 0 60px;
+      text-align: center;
+    }
+    .coach-card {
+      background: var(--bg-white);
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      text-align: center;
+      position: relative;
+    }
+    .coach-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+    .coach-img {
+      position: relative;
+      padding-top: 100%;
+      overflow: hidden;
+    }
+    .coach-img img {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .coach-card:hover .coach-img img {
+      transform: scale(1.05);
+    }
+    .coach-details {
+      padding: 24px;
+    }
+    .coach-role {
+      color: var(--color-secondary);
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .coach-name {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: var(--color-primary);
+    }
+    .coach-bio {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+    .coach-social {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .coach-social a {
+      color: var(--text-light);
+      background: var(--color-primary);
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+      transition: var(--transition);
+    }
+    .coach-social a:hover {
+      background: var(--color-secondary);
+      color: var(--bg-white);
+      transform: translateY(-2px);
+    }
+  </style>
+  <script src="components/header.js" defer></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main>
+    <section class="coaches-hero">
+      <div class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 16px;">Meet Our <span style="color:var(--color-secondary)">Coaches</span></h1>
+        <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; color: var(--text-light);">
+          Dedicated professionals with elite experience, committed to developing the next generation of sports talent.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cards-grid">
+          
+          <div class="coach-card">
+            <div class="coach-img">
+              <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=80" alt="Coach A">
+            </div>
+            <div class="coach-details">
+              <span class="coach-role">Head Sports Coach</span>
+              <h3 class="coach-name">Coach A.</h3>
+              <p class="coach-bio">Lead coach with elite UEFA credentials and a proven 15-year track record of youth development and professional placements.</p>
+              <div class="coach-social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="coach-card">
+            <div class="coach-img">
+              <img src="https://images.unsplash.com/photo-1520975698516-2b7e5d0f7b5c?auto=format&fit=crop&w=800&q=80" alt="Coach B">
+            </div>
+            <div class="coach-details">
+              <span class="coach-role">Assistant Coach</span>
+              <h3 class="coach-name">Coach B.</h3>
+              <p class="coach-bio">Technical specialist focusing on small-sided games, ball mastery, and high-intensity strength & conditioning.</p>
+              <div class="coach-social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="coach-card">
+            <div class="coach-img">
+              <img src="https://images.unsplash.com/photo-1526481280698-6f4b6f8ef6d6?auto=format&fit=crop&w=800&q=80" alt="Coach C">
+            </div>
+            <div class="coach-details">
+              <span class="coach-role">Goalkeeping Coach</span>
+              <h3 class="coach-name">Coach C.</h3>
+              <p class="coach-bio">Former professional keeper dedicated to focused goalkeeper training, reflex development, and match-readiness coaching.</p>
+              <div class="coach-social">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 20px;">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="50" fill="var(--bg-white)"/>
+              <path d="M50 20L80 70H20L50 20Z" fill="var(--color-secondary)"/>
+            </svg>
+            <div class="brand-text">
+              <strong style="color:var(--bg-white);">Sports Academy</strong>
+              <span style="color:rgba(255,255,255,0.7);">Highridge</span>
+            </div>
+          </div>
+          <p style="max-width: 300px;">Developing talent, building character, and forging the next generation of sports stars.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Sports Gallery</a></li>
+            <li><a href="coaches.html">Coaches</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-envelope" style="margin-right:8px; color:var(--color-secondary);"></i> <a href="mailto:info@highridgeschool.sc.tz">info@highridgeschool.sc.tz</a></li>
+            <li><i class="fa-solid fa-location-dot" style="margin-right:8px; color:var(--color-secondary);"></i> <a href="contact.html">Visit Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Highridge Sports Academy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

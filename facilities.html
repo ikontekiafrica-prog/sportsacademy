@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Facilities | Highridge Sports Academy</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .facilities-hero {
+      background-image: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), url('https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: var(--bg-white);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 0;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to top, rgba(10, 25, 47, 0.9), transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-overlay h3 {
+      color: var(--bg-white);
+      margin-bottom: 8px;
+    }
+    .gallery-overlay p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+    .gallery-item:hover .gallery-overlay p {
+      transform: translateY(0);
+    }
+  </style>
+  <script src="components/header.js" defer></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main>
+    <section class="facilities-hero">
+      <div class="container">
+        <h1 style="font-size: 3.5rem; margin-bottom: 16px;">World-Class <span style="color:var(--color-secondary)">Facilities</span></h1>
+        <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Providing the best environment for our athletes to train, recover, and excel.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Training Grounds</h2>
+        
+        <div class="gallery-grid">
+          
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=900&q=80" alt="Football Pitch">
+            <div class="gallery-overlay">
+              <h3>Full-size Football Pitch</h3>
+              <p>Floodlit, well-drained pitch maintained to competition standards for optimal playability year-round.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8d38?auto=format&fit=crop&w=900&q=80" alt="Gym">
+            <div class="gallery-overlay">
+              <h3>High-Performance Gym</h3>
+              <p>State-of-the-art conditioning gym and recovery facilities focusing on strength, agility, and injury prevention.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80" alt="Video Analysis">
+            <div class="gallery-overlay">
+              <h3>Video Analysis Suite</h3>
+              <p>Dedicated match review and tactical analysis suite with smart boards and software to accelerate learning.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbb211dba1?auto=format&fit=crop&w=900&q=80" alt="Locker Room">
+            <div class="gallery-overlay">
+              <h3>Professional Dressing Rooms</h3>
+              <p>Spacious, modern changing facilities designed to foster team spirit and match preparation.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 20px;">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="50" fill="var(--bg-white)"/>
+              <path d="M50 20L80 70H20L50 20Z" fill="var(--color-secondary)"/>
+            </svg>
+            <div class="brand-text">
+              <strong style="color:var(--bg-white);">Sports Academy</strong>
+              <span style="color:rgba(255,255,255,0.7);">Highridge</span>
+            </div>
+          </div>
+          <p style="max-width: 300px;">Developing talent, building character, and forging the next generation of sports stars.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Sports Gallery</a></li>
+            <li><a href="coaches.html">Coaches</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-envelope" style="margin-right:8px; color:var(--color-secondary);"></i> <a href="mailto:info@highridgeschool.sc.tz">info@highridgeschool.sc.tz</a></li>
+            <li><i class="fa-solid fa-location-dot" style="margin-right:8px; color:var(--color-secondary);"></i> <a href="contact.html">Visit Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Highridge Sports Academy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
